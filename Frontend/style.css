@@ -1,0 +1,149 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+/* 头部样式 */
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(50%);
+}
+
+header h1 {
+  font-size: 36px;
+  color: rgb(231, 231, 231);
+}
+
+/* 主体样式 */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#show-booking-form {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+
+#booking-form {
+  display: none;
+}
+
+#booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+#booking-form input[type="text"],
+#booking-form input[type="email"],
+#booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+#booking-form textarea {
+  height: 100px;
+}
+
+#booking-form button[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+
+#booking-form button[type="submit"]:hover {
+  background-color: #444;
+}
+
+/* 日期选择器样式 */
+.flatpickr-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+/* 底部样式 */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  main h2 {
+    font-size: 20px;
+  }
+
+  #booking-form input[type="text"],
+  #booking-form input[type="email"],
+  #booking-form textarea {
+    font-size: 14px;
+ 

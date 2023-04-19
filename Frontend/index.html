@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- 日期选择器 CDN flatpickr插件，现在显示的是德语日历 -->
+    <title>Kochkurs</title>
+</head>
+
+<body>
+    <header>
+        <img src="./logo.jpg" alt="logo" width="150" height="150">
+        <h1>WUNDERBAR KOCHKURS</h1>
+    </header>
+
+    <main>
+        <h2>Termin Reservieren</h2>
+        <button id="show-booking-form">Weiter</button>
+        <form id="booking-form">
+            <label for="date" lang="de">Datum</label>
+            <input type="text" id="date" name="date" lang="de" required
+                oninvalid="this.setCustomValidity('Bitte füllen Sie das Formular vollständig aus')"
+                oninput="this.setCustomValidity('')">
+            <label for="vorname">Vorname</label>
+            <input type="text" id="name" name="name" required
+                oninvalid="this.setCustomValidity('Bitte füllen Sie das Formular vollständig aus')"
+                oninput="this.setCustomValidity('')">
+            <label for="nachname">Nachname</label>
+            <input type="text" id="name" name="name" required required
+                oninvalid="this.setCustomValidity('Bitte füllen Sie das Formular vollständig aus')"
+                oninput="this.setCustomValidity('')">
+            <label for="email">Email</label>
+            <input type="text" id="name" name="name" required required
+                oninvalid="this.setCustomValidity('Bitte füllen Sie das Formular vollständig aus')"
+                oninput="this.setCustomValidity('')">
+            <label for="be_email">Email-Bestätigung</label>
+            <input type="email" id="email" name="email" required required
+                oninvalid="this.setCustomValidity('Bitte füllen Sie das Formular vollständig aus')"
+                oninput="this.setCustomValidity('')">
+            <button type="submit">senden</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; Kochkurs/2023</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script> <!-- 这个 de.js文件就解决了本地化日期显示 -->
+    <script>
+        flatpickr("#date", {
+            locale: "de",
+            altInput: true,
+            altFormat: "d.m.Y",
+            dateFormat: "Y-m-d"
+
+        });
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
