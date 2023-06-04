@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  wunderbar-termin-db:
+    container_name: wunderbar-termin-db
+    image: mysql
+    restart: 'always'
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: wunderbar-termin
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 8888:3306 # Internal Port: External Port

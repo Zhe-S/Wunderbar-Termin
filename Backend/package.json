@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/nodemon/bin/nodemon.js app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "sequelize db:migrate",
+    "migrate-undo": "sequelize db:migrate:undo"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^5.1.0",
-    "mongoose": "^7.0.3"
+    "mysql2": "^3.3.2",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "dotenv-run-script": "^0.2.0",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.0"
   }
 }

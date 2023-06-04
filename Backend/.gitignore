@@ -1,0 +1,8 @@
+# ignore DB attached folder
+data/
+
+# packages we depends up on
+node_modules
+
+# environment file
+.env
